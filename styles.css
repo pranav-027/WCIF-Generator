@@ -2,7 +2,7 @@ body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    text-align: center;
+
   }
   
   h1 {
@@ -36,4 +36,8 @@ body {
   
   button:hover {
     background-color: #45a049;
+  }
+
+  div{
+    text-align:center;
   }

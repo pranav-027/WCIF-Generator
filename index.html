@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WCIF Generator</title>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>WCIF Runner</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <script>
       function runWCIF() {
         var competitionName = document.getElementById("competitionName").value;
@@ -11,15 +11,36 @@
           competitionName +
           "/wcif";
 
-        // Redirect the page to the API URL
-        window.location.href = apiUrl;
+        // Open the API URL in a new tab
+        window.open(apiUrl, "_blank");
       }
     </script>
   </head>
   <body>
-    <h1>WCIF Generator</h1>
-    <label for="competitionName">Enter Competition Id:</label>
-    <input type="text" id="competitionName" placeholder="CompetitionId" />
-    <button onclick="runWCIF()">Get WCIF</button>
+    <div id="runners">
+      <h1>WCIF Runner</h1>
+      <label for="competitionName">Enter Competition Name:</label>
+      <input
+        type="text"
+        id="competitionName"
+        placeholder="YourCompetitionOpen2019"
+      />
+      <button onclick="runWCIF()">Run WCIF</button>
+    </div>
+    <br />
+
+    <p>You can use WCIF in the following WCA tools:</p>
+    <h2><a href="https://bestsiteever.ru/cutifier/">Cutifier</a></h2>
+    <p>
+      With this tool, you can make personal schedule cards for your WCA
+      competition.
+    </p>
+    <h2>
+      <a href="https://cube-comp-presenter.vercel.app/">Cube Comp Presenter</a>
+    </h2>
+    <p>
+      With this tool, you can present live groups and schedule in competition.
+    </p>
+    <!-- Add more WCA tools if needed -->
   </body>
 </html>
