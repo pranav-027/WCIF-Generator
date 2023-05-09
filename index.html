@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WCIF Generator</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script>
+      function runWCIF() {
+        var competitionName = document.getElementById("competitionName").value;
+        var apiUrl =
+          "https://www.worldcubeassociation.org/api/v0/competitions/" +
+          competitionName +
+          "/wcif";
+
+        // Redirect the page to the API URL
+        window.location.href = apiUrl;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>WCIF Generator</h1>
+    <label for="competitionName">Enter Competition Id:</label>
+    <input type="text" id="competitionName" placeholder="CompetitionId" />
+    <button onclick="runWCIF()">Get WCIF</button>
+  </body>
+</html>
