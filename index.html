@@ -3,6 +3,11 @@
   <head>
     <title>WCIF Generator</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
     <script>
       function runWCIF() {
         var competitionName = document.getElementById("competitionName").value;
@@ -17,30 +22,41 @@
     </script>
   </head>
   <body>
-    <div id="runners">
-      <h1>WCIF Generator</h1>
-      <label for="competitionName">Enter Competition Name:</label>
-      <input
-        type="text"
-        id="competitionName"
-        placeholder="YourCompetitionOpen2019"
-      />
-      <button onclick="runWCIF()">Run WCIF</button>
-    </div>
-    <br />
+    <div class="wrapper">
+      <div class="runner">
+        <h1>WCIF Generator</h1>
+        <label for="competitionName">Enter Competition Id:</label>
+        <input
+          type="text"
+          id="competitionName"
+          placeholder="YourCompetitionId"
+        />
+        <button onclick="runWCIF()">Get WCIF</button>
+      </div>
+      <br />
 
-    <p>You can use WCIF in the following WCA tools:</p>
-    <h2><a href="https://bestsiteever.ru/cutifier/">Cutifier</a></h2>
-    <p>
-      With this tool, you can make personal schedule cards for your WCA
-      competition.
-    </p>
-    <h2>
-      <a href="https://cube-comp-presenter.vercel.app/">Cube Comp Presenter</a>
-    </h2>
-    <p>
-      With this tool, you can present live groups and schedule in competition.
-    </p>
+      <div class="tools">
+        <p>You can use WCIF in the following WCA tools:</p>
+        <h2><a href="https://bestsiteever.ru/cutifier/">Cutifier</a></h2>
+        <p>
+          With this tool, you can make personal schedule cards for your WCA
+          competition.
+        </p>
+        <h2>
+          <a href="https://cube-comp-presenter.vercel.app/"
+            >Cube Comp Presenter</a
+          >
+        </h2>
+        <p>
+          With this tool, you can present live groups and schedule in
+          competition.
+        </p>
+      </div>
+    </div>
     <!-- Add more WCA tools if needed -->
+    <footer>
+      Made with <i class="icon ion-heart" style="color: #e25555"></i> By Pranav
+      Dadgaval
+    </footer>
   </body>
 </html>
