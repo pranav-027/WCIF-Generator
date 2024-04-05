@@ -8,18 +8,6 @@
       type="text/css"
       href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
     />
-    <script>
-      function runWCIF() {
-        var competitionName = document.getElementById("competitionName").value;
-        var apiUrl =
-          "https://www.worldcubeassociation.org/api/v0/competitions/" +
-          competitionName +
-          "/wcif";
-
-        // Open the API URL in a new tab
-        window.open(apiUrl, "_blank");
-      }
-    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -32,6 +20,7 @@
           placeholder="YourCompetitionId"
         />
         <button onclick="runWCIF()">Get WCIF</button>
+        <button onclick="runWCIFPublic()">Get Public WCIF</button>
       </div>
       <br />
 
@@ -62,5 +51,6 @@
       Made with <i class="icon ion-heart" style="color: #e25555"></i> By Pranav
       Dandgaval
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
